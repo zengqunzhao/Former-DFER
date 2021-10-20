@@ -21,6 +21,7 @@
   title={Former-DFER: Dynamic Facial Expression Recognition Transformer},
   author={Zhao, Zengqun and Liu, Qingshan},
   booktitle={Proceedings of the ACM International Conference on Multimedia},
+  pages={1553–1561},
   year={2021}
 }
 ```
