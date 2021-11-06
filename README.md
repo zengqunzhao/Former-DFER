@@ -17,11 +17,11 @@
 ## Citation
 
 ```
-@inproceedings{zhao2021formerdfer,
+@inproceedings{zhao2021former,
   title={Former-DFER: Dynamic Facial Expression Recognition Transformer},
   author={Zhao, Zengqun and Liu, Qingshan},
-  booktitle={Proceedings of the ACM International Conference on Multimedia},
-  pages={1553–1561},
+  booktitle={Proceedings of the 29th ACM International Conference on Multimedia},
+  pages={1553--1561},
   year={2021}
 }
 ```
