@@ -25,8 +25,7 @@ class VideoRecord(object):
 
 
 class VideoDataset(data.Dataset):
-    def __init__(self, root_path, list_file, num_segments, duration, mode, transform, image_size):
-        self.root_path = root_path
+    def __init__(self, list_file, num_segments, duration, mode, transform, image_size):
         self.list_file = list_file
         self.duration = duration
         self.num_segments = num_segments
@@ -102,8 +101,7 @@ def train_data_loader(data_set):
                                                        GroupRandomHorizontalFlip(),
                                                        Stack(),
                                                        ToTorchFormatTensor()])
-    train_data = VideoDataset(root_path="/home/datasets/DFER_Face/",
-                              list_file="./annotation/set_"+str(data_set)+"_train.txt",
+    train_data = VideoDataset(list_file="./annotation/set_"+str(data_set)+"_train.txt",
                               num_segments=8,
                               duration=2,
                               mode='train',
@@ -117,8 +115,7 @@ def test_data_loader(data_set):
     test_transform = torchvision.transforms.Compose([GroupResize(image_size),
                                                      Stack(),
                                                      ToTorchFormatTensor()])
-    test_data = VideoDataset(root_path="/home/datasets/DFER_Face/",
-                             list_file="./annotation/set_"+str(data_set)+"_test.txt",
+    test_data = VideoDataset(list_file="./annotation/set_"+str(data_set)+"_test.txt",
                              num_segments=8,
                              duration=2,
                              mode='test',
