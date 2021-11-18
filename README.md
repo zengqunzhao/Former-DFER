@@ -9,10 +9,13 @@
 
 ## Training
 
-
 - Step 1: download [DFEW](https://dfew-dataset.github.io) dataset.
 - Step 2: fill in the ***your_DFEW_Face_path*** in ```script.py```, then run ```script.py```.
 - Step 3: run ``` sh DFEW_Five_Fold.sh ```
+
+## Pre-trained Models
+
+The pre-trained Former-DFER model on DFEW can be downloaded [here](https://drive.google.com/file/d/1YV-KpdYQVAvSQw1setzBF1LeT4qx1bVt/view?usp=sharing).
 
 ## Citation
 
