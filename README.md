@@ -1,6 +1,6 @@
 # Former-DFER
 
-*Zengqun Zhao, Qingshan Liu. "[Former-DFER: Dynamic Facial Expression Recognition Transformer](https://zengqunzhao.github.io/doc/pdfs/MM2021.pdf)". ACM International Conference on Multimedia.*
+*Zengqun Zhao, Qingshan Liu. "[Former-DFER: Dynamic Facial Expression Recognition Transformer](https://dl.acm.org/doi/10.1145/3474085.3475292)". ACM International Conference on Multimedia.*
 
 ## Requirements
 
