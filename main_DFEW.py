@@ -28,7 +28,6 @@ parser.add_argument('--wd', '--weight-decay', default=1e-4, type=float, metavar=
 parser.add_argument('-p', '--print-freq', default=10, type=int, metavar='N', help='print frequency')
 parser.add_argument('--resume', default=None, type=str, metavar='PATH', help='path to latest checkpoint')
 parser.add_argument('--data_set', type=int, default=1)
-parser.add_argument('--gpu', type=str, default='0')
 
 args = parser.parse_args()
 now = datetime.datetime.now()
@@ -38,7 +37,6 @@ log_txt_path = project_path + 'log/' + time_str + 'set' + str(args.data_set) + '
 log_curve_path = project_path + 'log/' + time_str + 'set' + str(args.data_set) + '-log.png'
 checkpoint_path = project_path + 'checkpoint/' + time_str + 'set' + str(args.data_set) + '-model.pth'
 best_checkpoint_path = project_path + 'checkpoint/' + time_str + 'set' + str(args.data_set) + '-model_best.pth'
-os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
 
 
 def main():
