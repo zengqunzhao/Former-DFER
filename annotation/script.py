@@ -19,7 +19,7 @@ for txt_file in all_txt_file:
 your_dataset_path = ".../DFEW_Face/"
 all_txt_file = glob(os.path.join('DFEW_*.txt'))
 for txt_file in all_txt_file:
-    update(txt_file, "/home/user/datasets/DFER_Face/", your_dataset_path)
+    update(txt_file, "/home/user/datasets/DFEW_Face/", your_dataset_path)
 
 your_dataset_path = ".../FERV39K/"
 all_txt_file = glob(os.path.join('FERV39K_*.txt'))
