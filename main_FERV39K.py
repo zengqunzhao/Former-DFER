@@ -15,7 +15,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 import datetime
-from dataloader.dataset_DFEW import train_data_loader, test_data_loader
+from dataloader.dataset_FERV39K import train_data_loader, test_data_loader
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-j', '--workers', default=4, type=int, metavar='N', help='number of data loading workers')
@@ -32,10 +32,10 @@ parser.add_argument('--data_set', type=int, default=1)
 args = parser.parse_args()
 now = datetime.datetime.now()
 time_str = now.strftime("[%m-%d]-[%H:%M]-")
-log_txt_path = './log/' + time_str + 'set' + str(args.data_set) + '-log.txt'
-log_curve_path = './log/' + time_str + 'set' + str(args.data_set) + '-log.png'
-checkpoint_path = './checkpoint/' + time_str + 'set' + str(args.data_set) + '-model.pth'
-best_checkpoint_path = './checkpoint/' + time_str + 'set' + str(args.data_set) + '-model_best.pth'
+log_txt_path = './log/' + time_str + 'log.txt'
+log_curve_path = './log/' + time_str + 'log.png'
+checkpoint_path = './checkpoint/' + time_str + 'model.pth'
+best_checkpoint_path = './checkpoint/' + time_str + 'model_best.pth'
 
 
 def main():

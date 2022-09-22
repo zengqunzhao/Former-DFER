@@ -39,7 +39,8 @@ class VideoDataset(data.Dataset):
         # check the frame number is large >=16:
         # form is [video_id, num_frames, class_idx]
         tmp = [x.strip().split(' ') for x in open(self.list_file)]
-        tmp = [item for item in tmp if int(item[1]) >= 16]
+        # tmp = [item for item in tmp if int(item[1]) >= 16]
+        tmp = [item for item in tmp]
         self.video_list = [VideoRecord(item) for item in tmp]
         print(('video number:%d' % (len(self.video_list))))
 
@@ -101,7 +102,7 @@ def train_data_loader(data_set):
                                                        GroupRandomHorizontalFlip(),
                                                        Stack(),
                                                        ToTorchFormatTensor()])
-    train_data = VideoDataset(list_file="./annotation/set_"+str(data_set)+"_train.txt",
+    train_data = VideoDataset(list_file="./annotation/DFEW_set_"+str(data_set)+"_train.txt",
                               num_segments=8,
                               duration=2,
                               mode='train',
@@ -115,7 +116,7 @@ def test_data_loader(data_set):
     test_transform = torchvision.transforms.Compose([GroupResize(image_size),
                                                      Stack(),
                                                      ToTorchFormatTensor()])
-    test_data = VideoDataset(list_file="./annotation/set_"+str(data_set)+"_test.txt",
+    test_data = VideoDataset(list_file="./annotation/DFEW_set_"+str(data_set)+"_test.txt",
                              num_segments=8,
                              duration=2,
                              mode='test',

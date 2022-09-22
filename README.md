@@ -2,18 +2,19 @@
 
 *Zengqun Zhao, Qingshan Liu. "[Former-DFER: Dynamic Facial Expression Recognition Transformer](https://drive.google.com/file/d/12vyWD4mJ9HCkLyBctoPcvUbOU36Ptgc8/view?usp=sharing)". ACM International Conference on Multimedia.*
 
-## Requirements
+## Setup
 
-- pytorch==1.8.0
-- torchvision==0.9.0
+``` conda install pytorch==1.8.1 torchvision==0.9.1 torchaudio==0.8.1 cudatoolkit=10.2 -c pytorch ```
 
-## Training
+## Training on DFEW
 
 - Step 1: download [DFEW](https://dfew-dataset.github.io) dataset.
-- Step 2: fill in the ***your_DFEW_Face_path*** in ```script.py```, then run ```script.py```.
-- Step 3: run ``` sh DFEW_Five_Fold.sh ```
+- Step 2: fill in all the ***your_DFEW_Face_path*** in ```script.py```, then run ```script.py```.
+- Step 3: run ``` sh main_DFEW_trainer.sh ```
 
-##  Performance on FERV39k
+## Recent Updates
+
+#### Performance on FERV39k
 
 Recently, a new dynamic FER dataset named [FERV39k](https://wangyanckxx.github.io/Proj_CVPR2022_FERV39k.html) is proposed, the results of the Former-DFER on FERV39k are as follows:
 
@@ -21,12 +22,12 @@ Recently, a new dynamic FER dataset named [FERV39k](https://wangyanckxx.github.i
 | :----:   | :----: | :----: |:----:|  :----: | :----: |:----:| :----:   | :----:   |
 | 67.57    | 44.16  | 51.81  | 48.93| 25.09   | 10.80  | 9.80 | **36.88**| **45.72**| 
 
-## Pre-trained Models
+<!-- ## Pre-trained Models
 
-The pre-trained Former-DFER model on DFEW can be downloaded [here](https://drive.google.com/file/d/1YV-KpdYQVAvSQw1setzBF1LeT4qx1bVt/view?usp=sharing).
+The pre-trained Former-DFER model on DFEW can be downloaded [here](https://drive.google.com/file/d/1YV-KpdYQVAvSQw1setzBF1LeT4qx1bVt/view?usp=sharing). -->
 
 ## Citation
-
+If you find our work useful, please consider citing our paper:
 ```
 @inproceedings{zhao2021former,
   title={Former-DFER: Dynamic Facial Expression Recognition Transformer},

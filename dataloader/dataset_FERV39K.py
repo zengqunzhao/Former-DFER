@@ -26,7 +26,6 @@ class VideoRecord(object):
 
 class VideoDataset(data.Dataset):
     def __init__(self, list_file, num_segments, duration, mode, transform, image_size):
-
         self.list_file = list_file
         self.duration = duration
         self.num_segments = num_segments
@@ -75,8 +74,10 @@ class VideoDataset(data.Dataset):
         return self.get(record, segment_indices)
 
     def get(self, record, indices):
-        video_frames_path = glob.glob(os.path.join(record.path, '*'))
+        video_name = record.path.split('/')[-1]
+        video_frames_path = glob.glob(os.path.join(record.path, '*.jpg'))
         video_frames_path.sort()
+
         images = list()
         for seg_ind in indices:
             p = int(seg_ind)
@@ -95,13 +96,13 @@ class VideoDataset(data.Dataset):
         return len(self.video_list)
 
 
-def train_data_loader():
+def train_data_loader(data_set):
     image_size = 112
     train_transforms = torchvision.transforms.Compose([GroupRandomSizedCrop(image_size),
                                                        GroupRandomHorizontalFlip(),
                                                        Stack(),
                                                        ToTorchFormatTensor()])
-    train_data = VideoDataset(list_file="./annotation/AFEW_train.txt",
+    train_data = VideoDataset(list_file="./annotation/FERV39K_train.txt",
                               num_segments=8,
                               duration=2,
                               mode='train',
@@ -110,12 +111,12 @@ def train_data_loader():
     return train_data
 
 
-def test_data_loader():
+def test_data_loader(data_set):
     image_size = 112
     test_transform = torchvision.transforms.Compose([GroupResize(image_size),
                                                      Stack(),
                                                      ToTorchFormatTensor()])
-    test_data = VideoDataset(list_file="./annotation/AFEW_validation.txt",
+    test_data = VideoDataset(list_file="./annotation/FERV39K_test.txt",
                              num_segments=8,
                              duration=2,
                              mode='test',
