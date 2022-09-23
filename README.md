@@ -9,7 +9,7 @@
 ## Training on DFEW
 
 - Step 1: download [DFEW](https://dfew-dataset.github.io) dataset.
-- Step 2: fill in all the ***your_DFEW_Face_path*** in ```script.py```, then run ```script.py```.
+- Step 2: fill in all the ***your_dataset_path*** in ```script.py```, then run ```script.py```.
 - Step 3: run ``` sh main_DFEW_trainer.sh ```
 
 ## Recent Updates
