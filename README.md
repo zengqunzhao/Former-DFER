@@ -14,6 +14,10 @@
 
 ## Recent Updates
 
+#### Pretrain Models on DFEW
+
+The trained models on DFER (fd1, fd2, fd3, fd4, fd5) can be downloaded [here](https://drive.google.com/drive/folders/1g_n3HURQyQ-oBN6tYvhwD2M32Tdm_9gu?usp=sharing) (Google Driver).
+
 #### Performance on FERV39k
 
 Recently, a new dynamic FER dataset named [FERV39k](https://wangyanckxx.github.io/Proj_CVPR2022_FERV39k.html) is proposed, the results of the Former-DFER on FERV39k are as follows:
